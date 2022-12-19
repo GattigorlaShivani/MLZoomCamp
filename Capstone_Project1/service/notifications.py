@@ -8,7 +8,6 @@ RECEIPT_EMAIL = os.getenv("RECEIPT_EMAIL")
 
 
 def send_email(message):
-    """This function will send an email with a custom message"""
     with smtplib.SMTP("smtp.gmail.com") as connection:
         connection.starttls()
         connection.login(user=MY_EMAIL, password=PASSWORD)
