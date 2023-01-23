@@ -2,10 +2,6 @@
 
 Using sentiment analysis to classify documents based on their polarity. In particular, this project works with a dataset of 50,000 movie reviews from the Internet Movie Database (IMDb) and build a predictor that can distinguish between positive and negative review.
 
- # Dataset
-
-This [project](https://ai.stanford.edu/~amaas/data/sentiment/) uses a dataset with more than **`50,000`** reviews provided by Maas and others.
-
 # Overview
 This dataset contains movie reviews along with their associated binary sentiment polarity labels. It is intended to serve as a benchmark for sentiment classification. This document outlines how the dataset was gathered, and how to use the files provided.
 
@@ -197,20 +193,3 @@ docker tag imdb-model dajebbar/imdb-model:latest
 docker push dajebbar/imdb-model:latest
 
 ```
-# Test the project
-
-A quick demo of the web app can be found [here](https://youtu.be/AacgwUcIxu8).  
-
-# Want to Contribute?
-* Fork 🍴 the repository and send PRs.
-* Do ⭐ this repository if you like the content.
-
-
-**Connect with me:**
-
-<p align="center">
-  <a href="https://ma.linkedin.com/in/abdeljebbar-boubekri-656b30192" target="blank"><img align="center" src="https://www.vectorlogo.zone/logos/linkedin/linkedin-tile.svg" alt="https://ma.linkedin.com/in/abdeljebbar-boubekri-656b30192" height="30" width="30" /></a>
-  <a href="https://www.twitter.com/marokart/" target="blank"><img align="center"  src="https://img.icons8.com/color/48/000000/twitter--v2.png" alt="https://www.twitter.com/marokart/" height="30" width="30" /></a>
-  <a href="https://www.kaggle.com/dajebbar" target="blank">
-    <img align="center" src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/38/external-kaggle-an-online-community-of-data-scientists-and-machine-learners-owned-by-google-logo-shadow-tal-revivo.png" alt="https://www.kaggle.com/dajebbar" height="30" width="30" /></a>
-</p>
