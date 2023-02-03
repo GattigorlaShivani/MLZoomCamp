@@ -17,24 +17,25 @@ All_companies_df is a dataframe of the data extracted from the MONGO DB from the
 2.For the filter parameters, we extracted the company and employer id from the same dataframe.
 
 3.For the data range, we have to flow a few steps:
-* Convert the date_time column from the appcast_df data frame in “Year-Month-Date Hours:Minutes” in date column.
+* Convert the date_time column from the appcast_df data frame in “**Year-Month-Date Hours:Minutes**” in date column.
 * Extract the minimum and maximum date from the appcast_df data frame.
 * Convert the min and max dates to IST by adding the 5 Hours to the date column.
 * To return better results in MongoDB change the min_time by reducing 4 hours from the actual time and assign to min_correct_date for max_time increase it to 4 hours above the actual time and assign it to min_correct_date.
-4.Assign the “isFromGoogle” column as “True” and the “isBot” column as “False”.
+
+4.Assign the “**isFromGoogle**” column as “**True**” and the “**isBot**” column as “**False**”.
 
 ## Appcast Data Modifications:
-To create the primary key in the appcast_df data frame concat the date_time column and IP address in formate of “ipaddress<>date_time” and name the result column as primary_key.
+To create the primary key in the appcast_df data frame concat the date_time column and IP address in formate of “**ipaddress<>date_time**” and name the result column as primary_key.
 
 ## Database Data Modifications:
 All_company_df is the data frame fetched from the MongoDB by the filters which are mentioned above.
 
 ## Here are the few steps for post-extraction of Data from MONGO:
-1.To remove the duplicates from the all_company_df concat the column which contains the date in the format of “Year-Month-Date”, IP address, and jobpubjobid in the formate of “date<>ipaddress<>jobpubjobid” drop the rows with the same value of concat column.
+1.To remove the duplicates from the all_company_df concat the column which contains the date in the format of “**Year-Month-Date**”, IP address, and jobpubjobid in the formate of “**date<>ipaddress<>jobpubjobid**” drop the rows with the same value of concat column.
 
 2.Modify the IP address by replacing the HostID with 0 eg:127.168.0.1 → 127.168.0.0.
 
-3.Convert the date to “Year-Month-Date Hours: Minutes” format and assign it to the converted_date column.
+3.Convert the date to “**Year-Month-Date Hours: Minutes**” format and assign it to the converted_date column.
 
 4.Convert the converted_date column from IST to EST Zone by reducing the 5 hours from actual time and assigning it to the final_time column.
 
